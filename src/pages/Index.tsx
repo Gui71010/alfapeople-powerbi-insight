@@ -52,7 +52,7 @@ const Index = () => {
     <div className="min-h-screen bg-white">
       {/* Floating Widgets */}
       <div className="fixed bottom-4 left-4 z-50">
-        <Button size="icon" className="bg-red-600 hover:bg-red-700 rounded-full w-12 h-12 shadow-lg">
+        <Button size="icon" className="bg-orange-600 hover:bg-orange-700 rounded-full w-12 h-12 shadow-lg">
           <Accessibility className="h-6 w-6 text-white" />
         </Button>
       </div>
@@ -66,8 +66,16 @@ const Index = () => {
       {/* Header */}
       <header className="bg-white shadow-sm border-b">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-          <div className="flex items-center">
-            <h1 className="text-2xl font-bold text-red-600">AlfaPeople</h1>
+          <div className="flex items-center space-x-3">
+            <img 
+              src="/lovable-uploads/b39f2dce-37be-482b-afd4-8485eee2244c.png" 
+              alt="DashVision Logo" 
+              className="h-12 w-12"
+            />
+            <div>
+              <h1 className="text-2xl font-bold text-slate-800">DashVision</h1>
+              <p className="text-sm text-slate-600">Transformando números em decisões</p>
+            </div>
           </div>
           
           <Button
@@ -93,7 +101,7 @@ const Index = () => {
               <Mail className="h-4 w-4" />
               <span>Email</span>
             </div>
-            <Button className="bg-red-600 hover:bg-red-700">Contato</Button>
+            <Button className="bg-orange-600 hover:bg-orange-700">Contato</Button>
             <Search className="h-5 w-5 cursor-pointer" />
           </nav>
         </div>
@@ -114,7 +122,7 @@ const Index = () => {
                 <Mail className="h-4 w-4" />
                 <span>Email</span>
               </div>
-              <Button className="bg-red-600 hover:bg-red-700 w-full">Contato</Button>
+              <Button className="bg-orange-600 hover:bg-orange-700 w-full">Contato</Button>
               <div className="border-t pt-4 space-y-3">
                 <div>Soluções</div>
                 <div>Indústrias</div>
@@ -142,15 +150,15 @@ const Index = () => {
       </div>
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-900 to-blue-700 text-white py-20">
+      <section className="bg-gradient-to-r from-slate-900 to-slate-700 text-white py-20">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-5xl font-bold mb-6">Microsoft Power BI</h1>
-              <p className="text-xl mb-8 text-blue-100">
+              <p className="text-xl mb-8 text-slate-100">
                 Impulsione os negócios e obtenha vantagem competitiva, por meio da Inteligência de Dados
               </p>
-              <Button className="bg-red-600 hover:bg-red-700 text-lg px-8 py-4">
+              <Button className="bg-orange-600 hover:bg-orange-700 text-lg px-8 py-4">
                 Fale com um de nossos especialistas!
               </Button>
             </div>
@@ -282,7 +290,7 @@ const Index = () => {
               <h2 className="text-3xl font-bold mb-6">Recursos Avançados</h2>
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">
-                  <div className="bg-blue-600 p-2 rounded-lg">
+                  <div className="bg-slate-600 p-2 rounded-lg">
                     <Zap className="h-5 w-5 text-white" />
                   </div>
                   <div>
@@ -291,7 +299,7 @@ const Index = () => {
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="bg-blue-600 p-2 rounded-lg">
+                  <div className="bg-slate-600 p-2 rounded-lg">
                     <BarChart3 className="h-5 w-5 text-white" />
                   </div>
                   <div>
@@ -300,7 +308,7 @@ const Index = () => {
                   </div>
                 </div>
                 <div className="flex items-start space-x-3">
-                  <div className="bg-blue-600 p-2 rounded-lg">
+                  <div className="bg-slate-600 p-2 rounded-lg">
                     <Users className="h-5 w-5 text-white" />
                   </div>
                   <div>
@@ -345,15 +353,15 @@ const Index = () => {
       </section>
 
       {/* Second CTA */}
-      <section className="py-16 bg-gray-900 text-white">
+      <section className="py-16 bg-slate-900 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold mb-4">
             Invista em Business Intelligence e transforme seus dados em vantagem competitiva
           </h2>
-          <p className="text-xl mb-8 text-gray-300">
+          <p className="text-xl mb-8 text-slate-300">
             Não fique para trás. Comece sua jornada de transformação digital hoje mesmo.
           </p>
-          <Button className="bg-red-600 hover:bg-red-700 text-lg px-8 py-4">
+          <Button className="bg-orange-600 hover:bg-orange-700 text-lg px-8 py-4">
             Fale com um de nossos especialistas!
           </Button>
         </div>
@@ -384,7 +392,7 @@ const Index = () => {
 
             <Card className="text-center hover:shadow-lg transition-shadow">
               <CardHeader>
-                <div className="bg-blue-600 w-16 h-16 rounded-lg mx-auto mb-4 flex items-center justify-center">
+                <div className="bg-slate-600 w-16 h-16 rounded-lg mx-auto mb-4 flex items-center justify-center">
                   <Globe className="h-8 w-8 text-white" />
                 </div>
                 <CardTitle>Power Pages</CardTitle>
@@ -535,7 +543,7 @@ const Index = () => {
                   key={index}
                   onClick={() => setCurrentSlide(index)}
                   className={`w-3 h-3 rounded-full transition-colors ${
-                    currentSlide === index ? 'bg-red-600' : 'bg-gray-300'
+                    currentSlide === index ? 'bg-orange-600' : 'bg-gray-300'
                   }`}
                 />
               ))}
@@ -582,15 +590,15 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-16">
+      <footer className="bg-slate-900 text-white py-16">
         <div className="container mx-auto px-4">
           {/* CTA Section */}
           <div className="text-center mb-12">
             <div className="grid md:grid-cols-2 gap-6 max-w-2xl mx-auto">
-              <Button className="bg-red-600 hover:bg-red-700 py-3">
+              <Button className="bg-orange-600 hover:bg-orange-700 py-3">
                 Contate-nos
               </Button>
-              <Button variant="outline" className="border-white text-white hover:bg-white hover:text-gray-900 py-3">
+              <Button variant="outline" className="border-white text-white hover:bg-white hover:text-slate-900 py-3">
                 Fale com um especialista
               </Button>
             </div>
@@ -599,7 +607,17 @@ const Index = () => {
           <div className="grid lg:grid-cols-4 gap-8">
             {/* Logo and Partners */}
             <div className="lg:col-span-1">
-              <h3 className="text-2xl font-bold text-red-600 mb-6">AlfaPeople</h3>
+              <div className="flex items-center space-x-3 mb-6">
+                <img 
+                  src="/lovable-uploads/b39f2dce-37be-482b-afd4-8485eee2244c.png" 
+                  alt="DashVision Logo" 
+                  className="h-8 w-8"
+                />
+                <div>
+                  <h3 className="text-xl font-bold text-white">DashVision</h3>
+                  <p className="text-sm text-slate-300">Transformando números em decisões</p>
+                </div>
+              </div>
               <div className="space-y-4">
                 <div className="bg-blue-600 px-4 py-2 rounded text-sm text-center">
                   Microsoft Solutions Partner
@@ -641,7 +659,7 @@ const Index = () => {
                 <div className="bg-blue-600 p-2 rounded">
                   <Users className="h-5 w-5" />
                 </div>
-                <div className="bg-red-600 p-2 rounded">
+                <div className="bg-orange-600 p-2 rounded">
                   <Globe className="h-5 w-5" />
                 </div>
                 <div className="bg-green-600 p-2 rounded">
@@ -653,7 +671,7 @@ const Index = () => {
           </div>
 
           <div className="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400">
-            <p>© 2024 AlfaPeople. Todos os direitos reservados. | alfapeople.com</p>
+            <p>© 2024 DashVision. Todos os direitos reservados. | dashvision.com</p>
           </div>
         </div>
       </footer>
