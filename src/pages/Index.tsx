@@ -9,6 +9,13 @@ const Index = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
 
+  // Contact information - Update these with your actual contact details
+  const contactInfo = {
+    phone: "+55 11 99999-9999", // Substitua pelo seu número
+    email: "contato@dashvision.com", // Substitua pelo seu email
+    whatsapp: "+5511999999999" // Substitua pelo seu WhatsApp (sem espaços ou caracteres especiais)
+  };
+
   const successStories = [
     {
       company: "Ourofino",
@@ -58,7 +65,11 @@ const Index = () => {
       </div>
       
       <div className="fixed bottom-4 right-4 z-50">
-        <Button size="icon" className="bg-green-500 hover:bg-green-600 rounded-full w-12 h-12 shadow-lg">
+        <Button 
+          size="icon" 
+          className="bg-green-500 hover:bg-green-600 rounded-full w-12 h-12 shadow-lg"
+          onClick={() => window.open(`https://wa.me/${contactInfo.whatsapp}`, '_blank')}
+        >
           <MessageCircle className="h-6 w-6 text-white" />
         </Button>
       </div>
@@ -93,14 +104,14 @@ const Index = () => {
               <span>Sites Internacionais</span>
               <ChevronDown className="h-4 w-4" />
             </div>
-            <div className="flex items-center space-x-2">
+            <a href={`tel:${contactInfo.phone}`} className="flex items-center space-x-2 hover:text-orange-600 transition-colors">
               <Phone className="h-4 w-4" />
-              <span>Telefone</span>
-            </div>
-            <div className="flex items-center space-x-2">
+              <span>{contactInfo.phone}</span>
+            </a>
+            <a href={`mailto:${contactInfo.email}`} className="flex items-center space-x-2 hover:text-orange-600 transition-colors">
               <Mail className="h-4 w-4" />
-              <span>Email</span>
-            </div>
+              <span>{contactInfo.email}</span>
+            </a>
             <Button className="bg-orange-600 hover:bg-orange-700">Contato</Button>
             <Search className="h-5 w-5 cursor-pointer" />
           </nav>
@@ -114,14 +125,14 @@ const Index = () => {
                 <span>Sites Internacionais</span>
                 <ChevronDown className="h-4 w-4" />
               </div>
-              <div className="flex items-center space-x-2">
+              <a href={`tel:${contactInfo.phone}`} className="flex items-center space-x-2">
                 <Phone className="h-4 w-4" />
-                <span>Telefone</span>
-              </div>
-              <div className="flex items-center space-x-2">
+                <span>{contactInfo.phone}</span>
+              </a>
+              <a href={`mailto:${contactInfo.email}`} className="flex items-center space-x-2">
                 <Mail className="h-4 w-4" />
-                <span>Email</span>
-              </div>
+                <span>{contactInfo.email}</span>
+              </a>
               <Button className="bg-orange-600 hover:bg-orange-700 w-full">Contato</Button>
               <div className="border-t pt-4 space-y-3">
                 <div>Soluções</div>
@@ -595,10 +606,17 @@ const Index = () => {
           {/* CTA Section */}
           <div className="text-center mb-12">
             <div className="grid md:grid-cols-2 gap-6 max-w-2xl mx-auto">
-              <Button className="bg-orange-600 hover:bg-orange-700 py-3">
+              <Button 
+                className="bg-orange-600 hover:bg-orange-700 py-3"
+                onClick={() => window.open(`mailto:${contactInfo.email}`, '_blank')}
+              >
                 Contate-nos
               </Button>
-              <Button variant="outline" className="border-white text-white hover:bg-white hover:text-slate-900 py-3">
+              <Button 
+                variant="outline" 
+                className="border-white text-white hover:bg-white hover:text-slate-900 py-3"
+                onClick={() => window.open(`https://wa.me/${contactInfo.whatsapp}`, '_blank')}
+              >
                 Fale com um especialista
               </Button>
             </div>
@@ -618,13 +636,24 @@ const Index = () => {
                   <p className="text-sm text-slate-300">Transformando números em decisões</p>
                 </div>
               </div>
-              <div className="space-y-4">
+              <div className="space-y-4 mb-6">
                 <div className="bg-blue-600 px-4 py-2 rounded text-sm text-center">
                   Microsoft Solutions Partner
                 </div>
                 <div className="bg-orange-500 px-4 py-2 rounded text-sm text-center">
                   Inner Circle 24 25
                 </div>
+              </div>
+              {/* Contact Information */}
+              <div className="space-y-2">
+                <a href={`tel:${contactInfo.phone}`} className="flex items-center space-x-2 text-slate-300 hover:text-white transition-colors">
+                  <Phone className="h-4 w-4" />
+                  <span>{contactInfo.phone}</span>
+                </a>
+                <a href={`mailto:${contactInfo.email}`} className="flex items-center space-x-2 text-slate-300 hover:text-white transition-colors">
+                  <Mail className="h-4 w-4" />
+                  <span>{contactInfo.email}</span>
+                </a>
               </div>
             </div>
 
