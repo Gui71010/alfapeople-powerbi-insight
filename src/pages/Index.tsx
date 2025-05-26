@@ -341,14 +341,22 @@ const Index = () => {
       </section>
 
       {/* All Industries Section */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <img 
-                src="https://i.imgur.com/zDSZpGv.png" 
-                alt="Globo conectado"
-                className="rounded-lg shadow-xl"
+<section className="py-16">
+  <div className="container mx-auto px-4">
+    <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="lg:order-1">
+        <img 
+          src="https://i.imgur.com/zDSZpGv.png" 
+          alt="Globo conectado"
+          className="rounded-lg shadow-xl w-full max-w-[800px] mx-auto lg:mx-0"
+        />
+      </div>
+      <div className="lg:order-2">
+        {/* Seu conteúdo textual aqui */}
+      </div>
+    </div>
+  </div>
+</section>
               />
             </div>
             <div>
