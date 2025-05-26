@@ -11,9 +11,9 @@ const Index = () => {
 
   // Contact information - Update these with your actual contact details
   const contactInfo = {
-    phone: "+55 11 99999-9999", // Substitua pelo seu número
-    email: "contato@dashvision.com", // Substitua pelo seu email
-    whatsapp: "+5511999999999" // Substitua pelo seu WhatsApp (sem espaços ou caracteres especiais)
+    phone: "+55 38 988690984", // Substitua pelo seu número
+    email: "santiagoguilherme066@gmail.com", // Substitua pelo seu email
+    whatsapp: "+5538988690984" // Substitua pelo seu WhatsApp (sem espaços ou caracteres especiais)
   };
 
   const successStories = [
