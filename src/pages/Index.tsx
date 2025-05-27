@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Menu, X, Search, ChevronDown, ChevronRight, Phone, Mail, Globe, Users, BarChart3, Zap, Shield, BookOpen, ArrowRight, MessageCircle, Accessibility } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -9,11 +8,10 @@ const Index = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  // Contact information - Update these with your actual contact details
   const contactInfo = {
-    phone: "+55 38 988690984", // Substitua pelo seu número
-    email: "santiagoguilherme066@gmail.com", // Substitua pelo seu email
-    whatsapp: "+5538988690984" // Substitua pelo seu WhatsApp (sem espaços ou caracteres especiais)
+    phone: "+55 38 988690984",
+    email: "santiagoguilherme066@gmail.com",
+    whatsapp: "+5538988690984"
   };
 
   const successStories = [
@@ -177,7 +175,8 @@ const Index = () => {
               <img 
                 src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
                 alt="Power BI Dashboards"
-                className="rounded-lg shadow-2xl"
+                className="rounded-lg shadow-2xl w-full h-auto object-cover"
+                loading="lazy"
               />
             </div>
           </div>
@@ -195,7 +194,7 @@ const Index = () => {
             </p>
             
             {/* Partner Logos */}
-            <div className="flex justify-center items-center space-x-8 mb-8">
+            <div className="flex flex-wrap justify-center items-center gap-4 mb-8">
               <div className="text-center">
                 <div className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold">
                   Microsoft Solutions Partner
@@ -219,7 +218,7 @@ const Index = () => {
           <div className="max-w-4xl mx-auto">
             <Accordion type="single" collapsible className="space-y-4">
               <AccordionItem value="item-1">
-                <AccordionTrigger className="text-lg font-semibold">
+                <AccordionTrigger className="text-lg font-semibold hover:no-underline">
                   Resultados a partir de 2 semanas
                 </AccordionTrigger>
                 <AccordionContent>
@@ -232,7 +231,7 @@ const Index = () => {
               </AccordionItem>
               
               <AccordionItem value="item-2">
-                <AccordionTrigger className="text-lg font-semibold">
+                <AccordionTrigger className="text-lg font-semibold hover:no-underline">
                   Mais visibilidade e controle
                 </AccordionTrigger>
                 <AccordionContent>
@@ -245,7 +244,7 @@ const Index = () => {
               </AccordionItem>
               
               <AccordionItem value="item-3">
-                <AccordionTrigger className="text-lg font-semibold">
+                <AccordionTrigger className="text-lg font-semibold hover:no-underline">
                   Dados automatizados e unificados
                 </AccordionTrigger>
                 <AccordionContent>
@@ -258,7 +257,7 @@ const Index = () => {
               </AccordionItem>
               
               <AccordionItem value="item-4">
-                <AccordionTrigger className="text-lg font-semibold">
+                <AccordionTrigger className="text-lg font-semibold hover:no-underline">
                   Disseminação da cultura de dados em toda a organização
                 </AccordionTrigger>
                 <AccordionContent>
@@ -287,7 +286,8 @@ const Index = () => {
             <img 
               src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
               alt="Power BI em múltiplos dispositivos"
-              className="w-full rounded-lg shadow-xl"
+              className="w-full rounded-lg shadow-xl h-auto object-cover"
+              loading="lazy"
             />
           </div>
         </div>
@@ -333,7 +333,8 @@ const Index = () => {
               <img 
                 src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
                 alt="Recursos Power BI"
-                className="rounded-lg shadow-xl"
+                className="rounded-lg shadow-xl w-full h-auto object-cover"
+                loading="lazy"
               />
             </div>
           </div>
@@ -341,25 +342,18 @@ const Index = () => {
       </section>
 
       {/* All Industries Section */}
-<section className="py-16">
-  <div className="container mx-auto px-4">
-    <div className="grid lg:grid-cols-2 gap-12 items-center">
-      <div className="lg:order-1">
-        <img 
-          src="https://i.imgur.com/zDSZpGv.png" 
-          alt="Globo conectado"
-          className="rounded-lg shadow-xl w-full max-w-[800px] mx-auto lg:mx-0"
-        />
-      </div>
-      <div className="lg:order-2">
-        {/* Seu conteúdo textual aqui */}
-      </div>
-    </div>
-  </div>
-</section>
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="lg:order-1">
+              <img 
+                src="https://i.imgur.com/zDSZpGv.png" 
+                alt="Globo conectado"
+                className="rounded-lg shadow-xl w-full max-w-[800px] mx-auto lg:mx-0 h-auto object-cover"
+                loading="lazy"
               />
             </div>
-            <div>
+            <div className="lg:order-2">
               <h2 className="text-3xl font-bold mb-6">Power BI para todas as indústrias</h2>
               <p className="text-lg text-gray-700">
                 Seja qual for seu setor - manufatura, varejo, serviços financeiros, saúde ou 
@@ -471,7 +465,7 @@ const Index = () => {
           <div className="max-w-4xl mx-auto">
             <Accordion type="single" collapsible className="space-y-4">
               <AccordionItem value="faq-1">
-                <AccordionTrigger className="text-lg font-semibold">
+                <AccordionTrigger className="text-lg font-semibold hover:no-underline">
                   O que é o Microsoft Power BI?
                 </AccordionTrigger>
                 <AccordionContent>
@@ -485,7 +479,7 @@ const Index = () => {
               </AccordionItem>
               
               <AccordionItem value="faq-2">
-                <AccordionTrigger className="text-lg font-semibold">
+                <AccordionTrigger className="text-lg font-semibold hover:no-underline">
                   O Power BI é seguro para análise de dados?
                 </AccordionTrigger>
                 <AccordionContent>
@@ -498,7 +492,7 @@ const Index = () => {
               </AccordionItem>
               
               <AccordionItem value="faq-3">
-                <AccordionTrigger className="text-lg font-semibold">
+                <AccordionTrigger className="text-lg font-semibold hover:no-underline">
                   O Power BI é fácil de aprender?
                 </AccordionTrigger>
                 <AccordionContent>
@@ -528,7 +522,7 @@ const Index = () => {
           <div className="relative max-w-4xl mx-auto">
             <div className="overflow-hidden rounded-lg">
               <div 
-                className="flex transition-transform duration-300 ease-in-out"
+                className="flex transition-transform duration-500 ease-in-out"
                 style={{ transform: `translateX(-${currentSlide * 100}%)` }}
               >
                 {successStories.map((story, index) => (
@@ -541,6 +535,7 @@ const Index = () => {
                               src={story.image}
                               alt={story.company}
                               className="w-full h-48 object-cover rounded-lg"
+                              loading="lazy"
                             />
                           </div>
                           <div>
@@ -560,6 +555,7 @@ const Index = () => {
               {successStories.map((_, index) => (
                 <button
                   key={index}
+                  aria-label={`Ir para slide ${index + 1}`}
                   onClick={() => setCurrentSlide(index)}
                   className={`w-3 h-3 rounded-full transition-colors ${
                     currentSlide === index ? 'bg-orange-600' : 'bg-gray-300'
@@ -592,6 +588,7 @@ const Index = () => {
                     src={post.image}
                     alt={post.title}
                     className="w-full h-48 object-cover rounded-t-lg"
+                    loading="lazy"
                   />
                 </div>
                 <CardContent className="p-6">
@@ -638,6 +635,7 @@ const Index = () => {
                   src="/lovable-uploads/b39f2dce-37be-482b-afd4-8485eee2244c.png" 
                   alt="DashVision Logo" 
                   className="h-8 w-8"
+                  loading="lazy"
                 />
                 <div>
                   <h3 className="text-xl font-bold text-white">DashVision</h3>
