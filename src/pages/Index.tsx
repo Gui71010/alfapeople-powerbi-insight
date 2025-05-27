@@ -175,7 +175,7 @@ const Index = () => {
             </div>
             <div className="relative">
               <img 
-                src="https://i.imgur.com/Argpmv7.jpeg" 
+                src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
                 alt="Power BI Dashboards"
                 className="rounded-lg shadow-2xl"
               />
