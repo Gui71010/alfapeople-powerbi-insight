@@ -173,10 +173,14 @@ const Index = () => {
             </div>
             <div className="relative">
               <img 
-                src="https://i.imgur.com/Argpmv7.jpeg" 
-                alt="Power BI Dashboards"
-                className="rounded-lg shadow-2xl w-full h-auto object-cover"
-                loading="lazy"
+    src="https://i.imgur.com/Argpmv7.jpeg" 
+    alt="Power BI Dashboards"
+    className="rounded-lg shadow-2xl w-full max-w-5xl h-[500px] md:h-[600px] object-cover"
+    // Tamanho responsivo:
+    // - Mobile: altura 500px
+    // - Desktop (md:): altura 600px
+    // - Largura máxima de 5xl (1024px)
+    loading="lazy"
               />
             </div>
           </div>
