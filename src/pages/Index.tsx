@@ -165,7 +165,7 @@ const Index = () => {
             <div>
               <h1 className="text-5xl font-bold mb-6">Microsoft Power BI</h1>
               <p className="text-xl mb-8 text-slate-100">
-                Transforme dados em decisões inteligentes e conquiste uma vantagem competitiva sustentável. Com soluções avançadas de Data Intelligence, impulsione seus negócios, otimize operações e descubra oportunidades ocultas no mercado – tudo com precisão, agilidade e visão estratégica.
+                Transforme dados em vantagem competitiva! Com a DashVision, Inteligência de Dados e IA trabalham juntas para impulsionar seu negócio com insights estratégicos.
               </p>
               <Button className="bg-orange-600 hover:bg-orange-700 text-lg px-8 py-4">
                 Fale com um de nossos especialistas!
@@ -173,7 +173,7 @@ const Index = () => {
             </div>
             <div className="relative">
               <img 
-                src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+                src="https://i.imgur.com/Argpmv7.jpeg" 
                 alt="Power BI Dashboards"
                 className="rounded-lg shadow-2xl w-full h-auto object-cover"
                 loading="lazy"
