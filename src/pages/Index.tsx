@@ -170,7 +170,7 @@ const Index = () => {
                 Impulsione os negócios e obtenha vantagem competitiva, por meio da Inteligência de Dados
               </p>
               <Button className="bg-orange-600 hover:bg-orange-700 text-lg px-8 py-4">
-                Fale com um de nossos especialistas!
+                Fale com um de nossos especialista!
               </Button>
             </div>
             <div className="relative">
