@@ -167,7 +167,7 @@ const Index = () => {
             <div>
               <h1 className="text-5xl font-bold mb-6">Microsoft Power BI</h1>
               <p className="text-xl mb-8 text-slate-100">
-                Impulsione os negócios e obtenha vantagem competitiva, por meio da Inteligência de Dados
+                Transforme dados em decisões inteligentes e conquiste uma vantagem competitiva sustentável. Com soluções avançadas de Data Intelligence, impulsione seus negócios, otimize operações e descubra oportunidades ocultas no mercado – tudo com precisão, agilidade e visão estratégica.
               </p>
               <Button className="bg-orange-600 hover:bg-orange-700 text-lg px-8 py-4">
                 Fale com um de nossos especialistas!
@@ -282,7 +282,7 @@ const Index = () => {
             <p className="text-lg text-gray-700 mb-12">
               Acesse seus dashboards em qualquer lugar, a qualquer momento. O Power BI funciona 
               perfeitamente em desktop, laptop, tablet e celular, garantindo mobilidade total 
-              para suas análises.
+              para suas análises e um melhor acompanhamento de onde você estiver.
             </p>
             <img 
               src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
