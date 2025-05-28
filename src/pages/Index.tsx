@@ -16,7 +16,7 @@ const Index = () => {
   const contactInfo = {
     phone: "+55 38 988690984",
     email: "santiagoguilherme066@gmail.com",
-    whatsapp: "+5538988690984"
+    whatsapp: "https://api.whatsapp.com/send/?phone=5538988690984&text=Iniciar%20conversa%20com%20um%20de%20nossos%20especialistas&app_absent=0"
   };
 
   const successStories = [{
@@ -59,7 +59,7 @@ const Index = () => {
       
       <div className="fixed bottom-4 right-4 z-50">
         <Button size="icon" className="bg-green-500 hover:bg-green-600 rounded-full w-12 h-12 shadow-lg" asChild>
-          <a href={`https://wa.me/${contactInfo.whatsapp}`} target="_blank" rel="noopener noreferrer">
+          <a href={contactInfo.whatsapp} target="_blank" rel="noopener noreferrer">
             <MessageCircle className="h-6 w-6 text-white" />
           </a>
         </Button>
@@ -95,7 +95,7 @@ const Index = () => {
               <span>{contactInfo.email}</span>
             </a>
             <Button className="bg-orange-600 hover:bg-orange-700" asChild>
-              <a href={`https://wa.me/${contactInfo.whatsapp}`} target="_blank" rel="noopener noreferrer">
+              <a href={contactInfo.whatsapp} target="_blank" rel="noopener noreferrer">
                 Contato
               </a>
             </Button>
@@ -120,7 +120,7 @@ const Index = () => {
                 <span>{contactInfo.email}</span>
               </a>
               <Button className="bg-orange-600 hover:bg-orange-700 w-full" asChild>
-                <a href={`https://wa.me/${contactInfo.whatsapp}`} target="_blank" rel="noopener noreferrer">
+                <a href={contactInfo.whatsapp} target="_blank" rel="noopener noreferrer">
                   Contato
                 </a>
               </Button>
@@ -160,7 +160,7 @@ const Index = () => {
                 Transforme dados em vantagem competitiva! Com a DashVision, Inteligência de Dados e IA trabalham juntas para impulsionar seu negócio com insights estratégicos.
               </p>
               <Button className="bg-orange-600 hover:bg-orange-700 px-8 py-4 font-thin text-lg" asChild>
-                <a href={`https://wa.me/${contactInfo.whatsapp}`} target="_blank" rel="noopener noreferrer">
+                <a href={contactInfo.whatsapp} target="_blank" rel="noopener noreferrer">
                   Fale com um de nossos especialistas!
                 </a>
               </Button>
@@ -458,12 +458,12 @@ const Index = () => {
           <div className="text-center mb-12">
             <div className="grid md:grid-cols-2 gap-6 max-w-2xl mx-auto">
               <Button className="bg-orange-600 hover:bg-orange-700 py-3" asChild>
-                <a href={`https://wa.me/${contactInfo.whatsapp}`} target="_blank" rel="noopener noreferrer">
+                <a href={contactInfo.whatsapp} target="_blank" rel="noopener noreferrer">
                   Contate-nos
                 </a>
               </Button>
               <Button variant="outline" className="border-white py-3 text-stone-950 bg-slate-50" asChild>
-                <a href={`https://wa.me/${contactInfo.whatsapp}`} target="_blank" rel="noopener noreferrer">
+                <a href={contactInfo.whatsapp} target="_blank" rel="noopener noreferrer">
                   Fale com um especialista
                 </a>
               </Button>

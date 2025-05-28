@@ -3,6 +3,8 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 
 const SecondCTASection = () => {
+  const whatsappLink = "https://api.whatsapp.com/send/?phone=5538988690984&text=Iniciar%20conversa%20com%20um%20de%20nossos%20especialistas&app_absent=0";
+  
   return (
     <section className="py-16 bg-slate-900 text-white">
       <div className="container mx-auto px-4 text-center">
@@ -13,7 +15,7 @@ const SecondCTASection = () => {
           Não fique para trás. Comece sua jornada de transformação digital hoje mesmo.
         </p>
         <Button className="bg-orange-600 hover:bg-orange-700 text-lg px-8 py-4" asChild>
-          <a href="https://wa.me/5538988690984" target="_blank" rel="noopener noreferrer">
+          <a href={whatsappLink} target="_blank" rel="noopener noreferrer">
             Fale com um de nossos especialistas!
           </a>
         </Button>
