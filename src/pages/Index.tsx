@@ -8,17 +8,14 @@ import VisualPresentationSection from '@/components/VisualPresentationSection';
 import AdditionalResourcesSection from '@/components/AdditionalResourcesSection';
 import AllIndustriesSection from '@/components/AllIndustriesSection';
 import SecondCTASection from '@/components/SecondCTASection';
-
 const Index = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
-  
   const contactInfo = {
     phone: "+55 38 988690984",
     email: "santiagoguilherme066@gmail.com",
     whatsapp: "https://api.whatsapp.com/send/?phone=5538988690984&text=Iniciar%20conversa%20com%20um%20de%20nossos%20especialistas&app_absent=0"
   };
-
   const successStories = [{
     company: "Ourofino",
     description: "Transformação digital com Power BI resultou em 40% de aumento na eficiência operacional",
@@ -48,8 +45,7 @@ const Index = () => {
     image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
     date: "05 Jan 2024"
   }];
-  return (
-    <div className="min-h-screen bg-white">
+  return <div className="min-h-screen bg-white">
       {/* Floating Widgets */}
       <div className="fixed bottom-4 left-4 z-50">
         <Button size="icon" className="bg-orange-600 hover:bg-orange-700 rounded-full w-12 h-12 shadow-lg">
@@ -104,8 +100,7 @@ const Index = () => {
         </div>
 
         {/* Mobile Menu */}
-        {isMenuOpen && (
-          <div className="lg:hidden bg-white border-t">
+        {isMenuOpen && <div className="lg:hidden bg-white border-t">
             <nav className="container mx-auto px-4 py-4 space-y-4">
               <div className="flex items-center justify-between">
                 <span>Sites Internacionais</span>
@@ -135,8 +130,7 @@ const Index = () => {
                 <div>Sobre</div>
               </div>
             </nav>
-          </div>
-        )}
+          </div>}
       </header>
 
       {/* Breadcrumb */}
@@ -474,7 +468,7 @@ const Index = () => {
             {/* Logo and Partners */}
             <div className="lg:col-span-1">
               <div className="flex items-center space-x-3 mb-6">
-                <img src="/lovable-uploads/b39f2dce-37be-482b-afd4-8485eee2244c.png" alt="DashVision Logo" className="h-8 w-8" loading="lazy" />
+                <img alt="DashVision Logo" className="h-8 w-8" loading="lazy" src="https://i.imgur.com/mOg8yGo.png" />
                 <div>
                   <h3 className="text-xl font-bold text-white">DashVision</h3>
                   <p className="text-sm text-slate-300">Transformando números em decisões</p>
@@ -548,8 +542,6 @@ const Index = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
