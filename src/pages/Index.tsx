@@ -3,14 +3,22 @@ import { Menu, X, Search, ChevronDown, ChevronRight, Phone, Mail, Globe, Users, 
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import IntroductionSection from '@/components/IntroductionSection';
+import VisualPresentationSection from '@/components/VisualPresentationSection';
+import AdditionalResourcesSection from '@/components/AdditionalResourcesSection';
+import AllIndustriesSection from '@/components/AllIndustriesSection';
+import SecondCTASection from '@/components/SecondCTASection';
+
 const Index = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
+  
   const contactInfo = {
     phone: "+55 38 988690984",
     email: "santiagoguilherme066@gmail.com",
     whatsapp: "+5538988690984"
   };
+
   const successStories = [{
     company: "Ourofino",
     description: "Transformação digital com Power BI resultou em 40% de aumento na eficiência operacional",
@@ -40,7 +48,8 @@ const Index = () => {
     image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
     date: "05 Jan 2024"
   }];
-  return <div className="min-h-screen bg-white">
+  return (
+    <div className="min-h-screen bg-white">
       {/* Floating Widgets */}
       <div className="fixed bottom-4 left-4 z-50">
         <Button size="icon" className="bg-orange-600 hover:bg-orange-700 rounded-full w-12 h-12 shadow-lg">
@@ -49,8 +58,10 @@ const Index = () => {
       </div>
       
       <div className="fixed bottom-4 right-4 z-50">
-        <Button size="icon" className="bg-green-500 hover:bg-green-600 rounded-full w-12 h-12 shadow-lg" onClick={() => window.open(`https://wa.me/${contactInfo.whatsapp}`, '_blank')}>
-          <MessageCircle className="h-6 w-6 text-white" />
+        <Button size="icon" className="bg-green-500 hover:bg-green-600 rounded-full w-12 h-12 shadow-lg" asChild>
+          <a href={`https://wa.me/${contactInfo.whatsapp}`} target="_blank" rel="noopener noreferrer">
+            <MessageCircle className="h-6 w-6 text-white" />
+          </a>
         </Button>
       </div>
 
@@ -83,13 +94,16 @@ const Index = () => {
               <Mail className="h-4 w-4" />
               <span>{contactInfo.email}</span>
             </a>
-            <Button className="bg-orange-600 hover:bg-orange-700">Contato</Button>
+            <Button className="bg-orange-600 hover:bg-orange-700" asChild>
+              <a href={`mailto:${contactInfo.email}`}>Contato</a>
+            </Button>
             <Search className="h-5 w-5 cursor-pointer" />
           </nav>
         </div>
 
         {/* Mobile Menu */}
-        {isMenuOpen && <div className="lg:hidden bg-white border-t">
+        {isMenuOpen && (
+          <div className="lg:hidden bg-white border-t">
             <nav className="container mx-auto px-4 py-4 space-y-4">
               <div className="flex items-center justify-between">
                 <span>Sites Internacionais</span>
@@ -103,7 +117,9 @@ const Index = () => {
                 <Mail className="h-4 w-4" />
                 <span>{contactInfo.email}</span>
               </a>
-              <Button className="bg-orange-600 hover:bg-orange-700 w-full">Contato</Button>
+              <Button className="bg-orange-600 hover:bg-orange-700 w-full" asChild>
+                <a href={`mailto:${contactInfo.email}`}>Contato</a>
+              </Button>
               <div className="border-t pt-4 space-y-3">
                 <div>Soluções</div>
                 <div>Indústrias</div>
@@ -115,7 +131,8 @@ const Index = () => {
                 <div>Sobre</div>
               </div>
             </nav>
-          </div>}
+          </div>
+        )}
       </header>
 
       {/* Breadcrumb */}
@@ -138,8 +155,10 @@ const Index = () => {
               <p className="text-xl mb-8 text-slate-100">
                 Transforme dados em vantagem competitiva! Com a DashVision, Inteligência de Dados e IA trabalham juntas para impulsionar seu negócio com insights estratégicos.
               </p>
-              <Button className="bg-orange-600 hover:bg-orange-700 px-8 py-4 font-thin text-lg">
-                Fale com um de nossos especialistas!
+              <Button className="bg-orange-600 hover:bg-orange-700 px-8 py-4 font-thin text-lg" asChild>
+                <a href={`https://wa.me/${contactInfo.whatsapp}`} target="_blank" rel="noopener noreferrer">
+                  Fale com um de nossos especialistas!
+                </a>
               </Button>
             </div>
             <div className="relative">
@@ -150,27 +169,7 @@ const Index = () => {
       </section>
 
       {/* Introduction Section */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <p className="text-lg text-gray-700 mb-8">
-              Empresas que utilizam Business Intelligence crescem 5x mais que as que não utilizam. 
-              O Microsoft Power BI é uma ferramenta low-code e no-code que permite criar dashboards 
-              automatizados e obter insights estratégicos para tomada de decisões mais assertivas.
-            </p>
-            
-            {/* Partner Logos */}
-            <div className="flex flex-wrap justify-center items-center gap-4 mb-8">
-              <div className="text-center">
-                <div className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold">Faça um orçamento conosco!</div>
-              </div>
-              <div className="text-center">
-                <div className="bg-orange-500 text-white px-6 py-3 rounded-lg font-semibold">Entre em contato com um de nossos especialistas!</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <IntroductionSection />
 
       {/* Benefits Section */}
       <section className="py-16 bg-gray-50">
@@ -236,96 +235,16 @@ const Index = () => {
       </section>
 
       {/* Visual Presentation Section */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="max-w-6xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-8">Power BI em Múltiplos Dispositivos</h2>
-            <p className="text-lg text-gray-700 mb-12">
-              Acesse seus dashboards em qualquer lugar, a qualquer momento. O Power BI funciona 
-              perfeitamente em desktop, laptop, tablet e celular, garantindo mobilidade total 
-              para suas análises e um melhor acompanhamento de onde você estiver.
-            </p>
-            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Power BI em múltiplos dispositivos" className="w-full rounded-lg shadow-xl h-auto object-cover" loading="lazy" />
-          </div>
-        </div>
-      </section>
+      <VisualPresentationSection />
 
       {/* Additional Resources */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl font-bold mb-6">Recursos Avançados</h2>
-              <div className="space-y-4">
-                <div className="flex items-start space-x-3">
-                  <div className="bg-slate-600 p-2 rounded-lg">
-                    <Zap className="h-5 w-5 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold">Low-code/No-code</h3>
-                    <p className="text-gray-600">Crie dashboards sem necessidade de programação</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="bg-slate-600 p-2 rounded-lg">
-                    <BarChart3 className="h-5 w-5 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold">Inteligência Artificial</h3>
-                    <p className="text-gray-600">IA integrada para insights automáticos</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="bg-slate-600 p-2 rounded-lg">
-                    <Users className="h-5 w-5 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold">Dashboards Intuitivos</h3>
-                    <p className="text-gray-600">Interface amigável e fácil compreensão</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div>
-              <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Recursos Power BI" className="rounded-lg shadow-xl w-full h-auto object-cover" loading="lazy" />
-            </div>
-          </div>
-        </div>
-      </section>
+      <AdditionalResourcesSection />
 
       {/* All Industries Section */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="lg:order-1">
-              <img src="https://i.imgur.com/zDSZpGv.png" alt="Globo conectado" className="rounded-lg shadow-xl w-full max-w-[800px] mx-auto lg:mx-0 h-auto object-cover" loading="lazy" />
-            </div>
-            <div className="lg:order-2">
-              <h2 className="text-3xl font-bold mb-6">Power BI para todas as indústrias</h2>
-              <p className="text-lg text-gray-700">
-                Seja qual for seu setor - manufatura, varejo, serviços financeiros, saúde ou 
-                qualquer outro - o Power BI adapta-se às necessidades específicas do seu negócio, 
-                oferecendo soluções customizadas que geram valor real.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <AllIndustriesSection />
 
       {/* Second CTA */}
-      <section className="py-16 bg-slate-900 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-4">
-            Invista em Business Intelligence e transforme seus dados em vantagem competitiva
-          </h2>
-          <p className="text-xl mb-8 text-slate-300">
-            Não fique para trás. Comece sua jornada de transformação digital hoje mesmo.
-          </p>
-          <Button className="bg-orange-600 hover:bg-orange-700 text-lg px-8 py-4">
-            Fale com um de nossos especialistas!
-          </Button>
-        </div>
-      </section>
+      <SecondCTASection />
 
       {/* Power Platform Products */}
       <section className="py-16">
@@ -534,11 +453,13 @@ const Index = () => {
           {/* CTA Section */}
           <div className="text-center mb-12">
             <div className="grid md:grid-cols-2 gap-6 max-w-2xl mx-auto">
-              <Button className="bg-orange-600 hover:bg-orange-700 py-3" onClick={() => window.open(`mailto:${contactInfo.email}`, '_blank')}>
-                Contate-nos
+              <Button className="bg-orange-600 hover:bg-orange-700 py-3" asChild>
+                <a href={`mailto:${contactInfo.email}`}>Contate-nos</a>
               </Button>
-              <Button variant="outline" onClick={() => window.open(`https://wa.me/${contactInfo.whatsapp}`, '_blank')} className="border-white py-3 text-stone-950 bg-slate-50">
-                Fale com um especialista
+              <Button variant="outline" className="border-white py-3 text-stone-950 bg-slate-50" asChild>
+                <a href={`https://wa.me/${contactInfo.whatsapp}`} target="_blank" rel="noopener noreferrer">
+                  Fale com um especialista
+                </a>
               </Button>
             </div>
           </div>
@@ -621,6 +542,8 @@ const Index = () => {
           </div>
         </div>
       </footer>
-    </div>;
+    </div>
+  );
 };
+
 export default Index;
