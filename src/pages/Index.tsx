@@ -3,58 +3,44 @@ import { Menu, X, Search, ChevronDown, ChevronRight, Phone, Mail, Globe, Users, 
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
-
 const Index = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
-
   const contactInfo = {
     phone: "+55 38 988690984",
     email: "santiagoguilherme066@gmail.com",
     whatsapp: "+5538988690984"
   };
-
-  const successStories = [
-    {
-      company: "Ourofino",
-      description: "Transformação digital com Power BI resultou em 40% de aumento na eficiência operacional",
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
-    },
-    {
-      company: "TechCorp",
-      description: "Implementação de dashboards automatizados reduziu tempo de análise em 60%",
-      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
-    },
-    {
-      company: "InnovaGroup",
-      description: "Cultura de dados disseminada em toda organização com Power BI",
-      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
-    }
-  ];
-
-  const blogPosts = [
-    {
-      title: "Como o Power BI transforma a tomada de decisões",
-      excerpt: "Descubra como empresas estão usando BI para obter insights estratégicos",
-      image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-      date: "15 Jan 2024"
-    },
-    {
-      title: "Inteligência Artificial no Power BI",
-      excerpt: "As novas funcionalidades de IA que estão revolucionando a análise de dados",
-      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-      date: "10 Jan 2024"
-    },
-    {
-      title: "Power Platform: Integração completa",
-      excerpt: "Como integrar Power BI com outras ferramentas da Microsoft",
-      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
-      date: "05 Jan 2024"
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-white">
+  const successStories = [{
+    company: "Ourofino",
+    description: "Transformação digital com Power BI resultou em 40% de aumento na eficiência operacional",
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+  }, {
+    company: "TechCorp",
+    description: "Implementação de dashboards automatizados reduziu tempo de análise em 60%",
+    image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+  }, {
+    company: "InnovaGroup",
+    description: "Cultura de dados disseminada em toda organização com Power BI",
+    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80"
+  }];
+  const blogPosts = [{
+    title: "Como o Power BI transforma a tomada de decisões",
+    excerpt: "Descubra como empresas estão usando BI para obter insights estratégicos",
+    image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+    date: "15 Jan 2024"
+  }, {
+    title: "Inteligência Artificial no Power BI",
+    excerpt: "As novas funcionalidades de IA que estão revolucionando a análise de dados",
+    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+    date: "10 Jan 2024"
+  }, {
+    title: "Power Platform: Integração completa",
+    excerpt: "Como integrar Power BI com outras ferramentas da Microsoft",
+    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80",
+    date: "05 Jan 2024"
+  }];
+  return <div className="min-h-screen bg-white">
       {/* Floating Widgets */}
       <div className="fixed bottom-4 left-4 z-50">
         <Button size="icon" className="bg-orange-600 hover:bg-orange-700 rounded-full w-12 h-12 shadow-lg">
@@ -63,11 +49,7 @@ const Index = () => {
       </div>
       
       <div className="fixed bottom-4 right-4 z-50">
-        <Button 
-          size="icon" 
-          className="bg-green-500 hover:bg-green-600 rounded-full w-12 h-12 shadow-lg"
-          onClick={() => window.open(`https://wa.me/${contactInfo.whatsapp}`, '_blank')}
-        >
+        <Button size="icon" className="bg-green-500 hover:bg-green-600 rounded-full w-12 h-12 shadow-lg" onClick={() => window.open(`https://wa.me/${contactInfo.whatsapp}`, '_blank')}>
           <MessageCircle className="h-6 w-6 text-white" />
         </Button>
       </div>
@@ -76,30 +58,21 @@ const Index = () => {
       <header className="bg-white shadow-sm border-b">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center space-x-3">
-            <img 
-              src="/lovable-uploads/b39f2dce-37be-482b-afd4-8485eee2244c.png" 
-              alt="DashVision Logo" 
-              className="h-12 w-12"
-            />
+            <img src="/lovable-uploads/b39f2dce-37be-482b-afd4-8485eee2244c.png" alt="DashVision Logo" className="h-12 w-12" />
             <div>
               <h1 className="text-2xl font-bold text-slate-800">DashVision</h1>
               <p className="text-sm text-slate-600">Transformando números em decisões</p>
             </div>
           </div>
           
-          <Button
-            variant="ghost"
-            size="icon"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="lg:hidden"
-          >
+          <Button variant="ghost" size="icon" onClick={() => setIsMenuOpen(!isMenuOpen)} className="lg:hidden">
             {isMenuOpen ? <X /> : <Menu />}
           </Button>
 
           {/* Desktop Menu */}
           <nav className="hidden lg:flex items-center space-x-6">
             <div className="flex items-center space-x-1 cursor-pointer">
-              <span>Sites Internacionais</span>
+              <span>Entre em contato conosco</span>
               <ChevronDown className="h-4 w-4" />
             </div>
             <a href={`tel:${contactInfo.phone}`} className="flex items-center space-x-2 hover:text-orange-600 transition-colors">
@@ -116,8 +89,7 @@ const Index = () => {
         </div>
 
         {/* Mobile Menu */}
-        {isMenuOpen && (
-          <div className="lg:hidden bg-white border-t">
+        {isMenuOpen && <div className="lg:hidden bg-white border-t">
             <nav className="container mx-auto px-4 py-4 space-y-4">
               <div className="flex items-center justify-between">
                 <span>Sites Internacionais</span>
@@ -143,8 +115,7 @@ const Index = () => {
                 <div>Sobre</div>
               </div>
             </nav>
-          </div>
-        )}
+          </div>}
       </header>
 
       {/* Breadcrumb */}
@@ -153,7 +124,7 @@ const Index = () => {
           <div className="flex items-center space-x-2 text-sm text-gray-600">
             <span>Início</span>
             <ChevronRight className="h-4 w-4" />
-            <span>Power BI para Microsoft Dynamics 365</span>
+            <span>Venha revolucionar seu negócio com Dados estratégicos!</span>
           </div>
         </div>
       </div>
@@ -167,17 +138,12 @@ const Index = () => {
               <p className="text-xl mb-8 text-slate-100">
                 Transforme dados em vantagem competitiva! Com a DashVision, Inteligência de Dados e IA trabalham juntas para impulsionar seu negócio com insights estratégicos.
               </p>
-              <Button className="bg-orange-600 hover:bg-orange-700 text-lg px-8 py-4">
+              <Button className="bg-orange-600 hover:bg-orange-700 px-8 py-4 font-thin text-lg">
                 Fale com um de nossos especialistas!
               </Button>
             </div>
             <div className="relative">
-              <img 
-                src="https://i.imgur.com/nloreat.jpeg" 
-                alt="Power BI Dashboards"
-                className="rounded-lg shadow-2xl w-full h-auto object-cover"
-                loading="lazy"
-              />
+              <img src="https://i.imgur.com/nloreat.jpeg" alt="Power BI Dashboards" className="rounded-lg shadow-2xl w-full h-auto object-cover" loading="lazy" />
             </div>
           </div>
         </div>
@@ -196,14 +162,10 @@ const Index = () => {
             {/* Partner Logos */}
             <div className="flex flex-wrap justify-center items-center gap-4 mb-8">
               <div className="text-center">
-                <div className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold">
-                  Microsoft Solutions Partner
-                </div>
+                <div className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold">Faça um orçamento conosco!</div>
               </div>
               <div className="text-center">
-                <div className="bg-orange-500 text-white px-6 py-3 rounded-lg font-semibold">
-                  Inner Circle 24 25
-                </div>
+                <div className="bg-orange-500 text-white px-6 py-3 rounded-lg font-semibold">Entre em contato com um de nossos especialistas!</div>
               </div>
             </div>
           </div>
@@ -283,12 +245,7 @@ const Index = () => {
               perfeitamente em desktop, laptop, tablet e celular, garantindo mobilidade total 
               para suas análises e um melhor acompanhamento de onde você estiver.
             </p>
-            <img 
-              src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
-              alt="Power BI em múltiplos dispositivos"
-              className="w-full rounded-lg shadow-xl h-auto object-cover"
-              loading="lazy"
-            />
+            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="Power BI em múltiplos dispositivos" className="w-full rounded-lg shadow-xl h-auto object-cover" loading="lazy" />
           </div>
         </div>
       </section>
@@ -330,12 +287,7 @@ const Index = () => {
               </div>
             </div>
             <div>
-              <img 
-                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
-                alt="Recursos Power BI"
-                className="rounded-lg shadow-xl w-full h-auto object-cover"
-                loading="lazy"
-              />
+              <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Recursos Power BI" className="rounded-lg shadow-xl w-full h-auto object-cover" loading="lazy" />
             </div>
           </div>
         </div>
@@ -346,12 +298,7 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="lg:order-1">
-              <img 
-                src="https://i.imgur.com/zDSZpGv.png" 
-                alt="Globo conectado"
-                className="rounded-lg shadow-xl w-full max-w-[800px] mx-auto lg:mx-0 h-auto object-cover"
-                loading="lazy"
-              />
+              <img src="https://i.imgur.com/zDSZpGv.png" alt="Globo conectado" className="rounded-lg shadow-xl w-full max-w-[800px] mx-auto lg:mx-0 h-auto object-cover" loading="lazy" />
             </div>
             <div className="lg:order-2">
               <h2 className="text-3xl font-bold mb-6">Power BI para todas as indústrias</h2>
@@ -521,22 +468,15 @@ const Index = () => {
           
           <div className="relative max-w-4xl mx-auto">
             <div className="overflow-hidden rounded-lg">
-              <div 
-                className="flex transition-transform duration-500 ease-in-out"
-                style={{ transform: `translateX(-${currentSlide * 100}%)` }}
-              >
-                {successStories.map((story, index) => (
-                  <div key={index} className="w-full flex-shrink-0">
+              <div className="flex transition-transform duration-500 ease-in-out" style={{
+              transform: `translateX(-${currentSlide * 100}%)`
+            }}>
+                {successStories.map((story, index) => <div key={index} className="w-full flex-shrink-0">
                     <Card className="mx-4">
                       <CardContent className="p-6">
                         <div className="grid md:grid-cols-2 gap-6 items-center">
                           <div>
-                            <img 
-                              src={story.image}
-                              alt={story.company}
-                              className="w-full h-48 object-cover rounded-lg"
-                              loading="lazy"
-                            />
+                            <img src={story.image} alt={story.company} className="w-full h-48 object-cover rounded-lg" loading="lazy" />
                           </div>
                           <div>
                             <h3 className="text-2xl font-bold mb-4">{story.company}</h3>
@@ -545,23 +485,13 @@ const Index = () => {
                         </div>
                       </CardContent>
                     </Card>
-                  </div>
-                ))}
+                  </div>)}
               </div>
             </div>
             
             {/* Carousel Controls */}
             <div className="flex justify-center space-x-2 mt-6">
-              {successStories.map((_, index) => (
-                <button
-                  key={index}
-                  aria-label={`Ir para slide ${index + 1}`}
-                  onClick={() => setCurrentSlide(index)}
-                  className={`w-3 h-3 rounded-full transition-colors ${
-                    currentSlide === index ? 'bg-orange-600' : 'bg-gray-300'
-                  }`}
-                />
-              ))}
+              {successStories.map((_, index) => <button key={index} aria-label={`Ir para slide ${index + 1}`} onClick={() => setCurrentSlide(index)} className={`w-3 h-3 rounded-full transition-colors ${currentSlide === index ? 'bg-orange-600' : 'bg-gray-300'}`} />)}
             </div>
             
             <div className="text-center mt-8">
@@ -581,15 +511,9 @@ const Index = () => {
           </div>
           
           <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            {blogPosts.map((post, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow">
+            {blogPosts.map((post, index) => <Card key={index} className="hover:shadow-lg transition-shadow">
                 <div>
-                  <img 
-                    src={post.image}
-                    alt={post.title}
-                    className="w-full h-48 object-cover rounded-t-lg"
-                    loading="lazy"
-                  />
+                  <img src={post.image} alt={post.title} className="w-full h-48 object-cover rounded-t-lg" loading="lazy" />
                 </div>
                 <CardContent className="p-6">
                   <p className="text-sm text-gray-500 mb-2">{post.date}</p>
@@ -599,8 +523,7 @@ const Index = () => {
                     Ler mais <ArrowRight className="h-4 w-4 ml-1" />
                   </Button>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -611,17 +534,10 @@ const Index = () => {
           {/* CTA Section */}
           <div className="text-center mb-12">
             <div className="grid md:grid-cols-2 gap-6 max-w-2xl mx-auto">
-              <Button 
-                className="bg-orange-600 hover:bg-orange-700 py-3"
-                onClick={() => window.open(`mailto:${contactInfo.email}`, '_blank')}
-              >
+              <Button className="bg-orange-600 hover:bg-orange-700 py-3" onClick={() => window.open(`mailto:${contactInfo.email}`, '_blank')}>
                 Contate-nos
               </Button>
-              <Button 
-                variant="outline" 
-                className="border-white text-white hover:bg-white hover:text-slate-900 py-3"
-                onClick={() => window.open(`https://wa.me/${contactInfo.whatsapp}`, '_blank')}
-              >
+              <Button variant="outline" onClick={() => window.open(`https://wa.me/${contactInfo.whatsapp}`, '_blank')} className="border-white py-3 text-stone-950 bg-slate-50">
                 Fale com um especialista
               </Button>
             </div>
@@ -631,12 +547,7 @@ const Index = () => {
             {/* Logo and Partners */}
             <div className="lg:col-span-1">
               <div className="flex items-center space-x-3 mb-6">
-                <img 
-                  src="/lovable-uploads/b39f2dce-37be-482b-afd4-8485eee2244c.png" 
-                  alt="DashVision Logo" 
-                  className="h-8 w-8"
-                  loading="lazy"
-                />
+                <img src="/lovable-uploads/b39f2dce-37be-482b-afd4-8485eee2244c.png" alt="DashVision Logo" className="h-8 w-8" loading="lazy" />
                 <div>
                   <h3 className="text-xl font-bold text-white">DashVision</h3>
                   <p className="text-sm text-slate-300">Transformando números em decisões</p>
@@ -710,8 +621,6 @@ const Index = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
