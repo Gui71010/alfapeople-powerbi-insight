@@ -95,7 +95,9 @@ const Index = () => {
               <span>{contactInfo.email}</span>
             </a>
             <Button className="bg-orange-600 hover:bg-orange-700" asChild>
-              <a href={`mailto:${contactInfo.email}`}>Contato</a>
+              <a href={`https://wa.me/${contactInfo.whatsapp}`} target="_blank" rel="noopener noreferrer">
+                Contato
+              </a>
             </Button>
             <Search className="h-5 w-5 cursor-pointer" />
           </nav>
@@ -118,7 +120,9 @@ const Index = () => {
                 <span>{contactInfo.email}</span>
               </a>
               <Button className="bg-orange-600 hover:bg-orange-700 w-full" asChild>
-                <a href={`mailto:${contactInfo.email}`}>Contato</a>
+                <a href={`https://wa.me/${contactInfo.whatsapp}`} target="_blank" rel="noopener noreferrer">
+                  Contato
+                </a>
               </Button>
               <div className="border-t pt-4 space-y-3">
                 <div>Soluções</div>
@@ -454,7 +458,9 @@ const Index = () => {
           <div className="text-center mb-12">
             <div className="grid md:grid-cols-2 gap-6 max-w-2xl mx-auto">
               <Button className="bg-orange-600 hover:bg-orange-700 py-3" asChild>
-                <a href={`mailto:${contactInfo.email}`}>Contate-nos</a>
+                <a href={`https://wa.me/${contactInfo.whatsapp}`} target="_blank" rel="noopener noreferrer">
+                  Contate-nos
+                </a>
               </Button>
               <Button variant="outline" className="border-white py-3 text-stone-950 bg-slate-50" asChild>
                 <a href={`https://wa.me/${contactInfo.whatsapp}`} target="_blank" rel="noopener noreferrer">
