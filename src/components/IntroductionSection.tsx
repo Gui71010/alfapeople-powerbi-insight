@@ -29,6 +29,16 @@ const IntroductionSection = () => {
                 </a>
               </Button>
             </div>
+            <div className="text-center">
+              <a 
+                href="https://wa.me/5538988690984?text=Tire%20suas%20d%C3%BAvidas%20com%20nossa%20equipe%20agora%20mesmo" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-block bg-[#25D366] text-white px-6 py-3 text-base font-semibold rounded-lg no-underline shadow-lg transition-colors duration-300 hover:bg-[#1ebe57]"
+              >
+                Tire suas dúvidas com nossa equipe agora mesmo
+              </a>
+            </div>
           </div>
         </div>
       </div>
