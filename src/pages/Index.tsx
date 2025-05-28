@@ -65,7 +65,7 @@ const Index = () => {
       <header className="bg-white shadow-sm border-b">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center space-x-3">
-            <img src="/lovable-uploads/b39f2dce-37be-482b-afd4-8485eee2244c.png" alt="DashVision Logo" className="h-12 w-12" />
+            <img alt="DashVision Logo" className="h-12 w-12" src="https://i.imgur.com/ggdcU3V.png" />
             <div>
               <h1 className="text-2xl font-bold text-slate-800">DashVision</h1>
               <p className="text-sm text-slate-600">Transformando números em decisões</p>
